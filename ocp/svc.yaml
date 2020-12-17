@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: os-sample-python
+  namespace: test-basivi
+  labels:
+    app: os-sample-python
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: os-sample-python
+    deploymentconfig: os-sample-python
+  type: ClusterIP
+  sessionAffinity: None
+
