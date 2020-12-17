@@ -35,3 +35,9 @@ If needing to select a specific Python version when using ``oc new-app``, you sh
 ```
 oc new-app python:2.7~https://github.com/OpenShiftDemos/os-sample-python.git
 ```
+
+Create Route
+
+```
+oc create route edge --service=os-sample-python
+```
